@@ -1,14 +1,16 @@
-<mat-grid-list cols="4" rowHeight="200px" style="margin-top: 20px;">
-  <mat-grid-tile>
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>Corona</mat-card-title>
-        <mat-card-subtitle>Lager</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>Some content about beers</mat-card-content>
-    </mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile>2</mat-grid-tile>
-  <mat-grid-tile>3</mat-grid-tile>
-  <mat-grid-tile>4</mat-grid-tile>
-</mat-grid-list>
+<div style="margin: 20px 20px">
+
+  <mat-grid-list cols="4" rowHeight="400px" gutterSize="10px">
+
+    <mat-grid-tile *ngFor="let beer of beerList">
+      <mat-card style="height: 80%; width: 80%" class="mat-elevation-z8">
+        <mat-card-header>
+          <mat-card-title><h2>{{beer.productName}}</h2></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>{{beer.productInfo}}</mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+</div>
