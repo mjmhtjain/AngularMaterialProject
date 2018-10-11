@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>BeerKart</span>
+
+    <span class="example-spacer"></span>
+
+    <button mat-icon-button style="margin-right: 20px;">
+      <mat-icon class="example-icon" matBadgeColor="accent" matBadge="0" matBadgePosition="above after" aria-label="Example icon-button with a heart icon">shopping_cart</mat-icon>
+    </button>
+
+    <button mat-icon-button style="margin-right: 10px;" [matMenuTriggerFor]="menu">
+      <mat-icon aria-label="Example icon-button with a heart icon">account_circle</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+      <button mat-menu-item>
+        <mat-icon>info</mat-icon>
+        <span>Account Info</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
