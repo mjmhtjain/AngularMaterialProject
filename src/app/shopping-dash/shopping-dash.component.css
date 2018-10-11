@@ -1,0 +1,6 @@
+.shopping-card{
+    height: 80%; 
+    width: 80%; 
+    background-image: url('../../assets/stock-photos/corona.jpeg');
+    opacity: 0.5;
+}

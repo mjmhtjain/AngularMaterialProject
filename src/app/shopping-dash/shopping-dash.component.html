@@ -3,12 +3,19 @@
   <mat-grid-list cols="4" rowHeight="400px" gutterSize="10px">
 
     <mat-grid-tile *ngFor="let beer of beerList">
-      <mat-card style="height: 80%; width: 80%" class="mat-elevation-z8">
-        <mat-card-header>
-          <mat-card-title><h2>{{beer.productName}}</h2></mat-card-title>
-        </mat-card-header>
-        <mat-card-content>{{beer.productInfo}}</mat-card-content>
-      </mat-card>
+      <!-- <div> -->
+        <mat-card style="height: 80%; width: 80%;" class="mat-elevation-z8">
+          <mat-card-header>
+            <mat-card-title>
+              <h2>{{beer.productName}}</h2>
+            </mat-card-title>
+          </mat-card-header>
+          <div style="display: flex; height: 60%;">
+            <img src="../../assets/stock-photos/corona.jpeg" style="object-fit: contain; object-position: left;">
+          </div>
+          <mat-card-content style="margin-top: 10px">{{beer.productInfo}}</mat-card-content>
+        </mat-card>
+      <!-- </div> -->
     </mat-grid-tile>
 
   </mat-grid-list>
